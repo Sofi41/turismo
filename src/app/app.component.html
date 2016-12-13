@@ -1,26 +1,266 @@
+<div class="card-panel teal deep-purple lighten-3">
 <nav>
-  <div class="nav-wrapper">
-    <a href="" class="brand-logo">Logo</a>
+  <div class="indigo lighten-3ss">
+    <a href="" class="indigo lighten-3ss">Turismo en Colombia</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">          
       <li>
           <a  (click)="listarTurismo()"
               class="waves-effect waves-light btn">
-              Ver los cursos existentes
+              Ver Registros.
           </a>
       </li>
     </ul>
   </div>
 </nav>
 
+<br>
+
+  
+
   <!-- Page Layout here -->
   <div class="row">
 
-    <div class="col s12 m4 l2" style="margin-top:20px;"> <!-- Note that "m4 l3" was added -->
-          <div class="chip">
-            <img src="data:image/jpeg;base64,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" alt="Contact Person">
-            Profesor Jose
+   
+      <div class="col s12 m8 offset-m2 l6 ">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="assets/img/st13.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+              <span class="black-text">
+                San andres
+              </span>
+            </div>
           </div>
+        </div>
+      </div>
+
+      <div class="col s12 m8 offset-m2 l6 ">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="assets/img/st2.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+              <span class="black-text">
+                Barranquilla
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m8 offset-m2 l6  ">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="assets/img/st14.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+              <span class="black-text">
+                Buga
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m8 offset-m2 l6  ">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="assets/img/st5.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+              <span class="black-text">
+                Medellin
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m8 offset-m2 l6  ">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="assets/img/st7.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+              <span class="black-text">
+                cartagena
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m8 offset-m2 l6  ">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="assets/img/st15.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+              <span class="black-text">
+                Manizales
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m8 offset-m2 l6 ">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="assets/img/st3.png" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+              <span class="black-text">
+                Ciudades Colombianas
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br> <br>
+
+      <table>
+        <thead>
+          <tr>
+              <th data-field="id">Sitios</th>
+              <th data-field="name">% sobre el valor total</th>
+              
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Campo y playa (Descanso)</td>
+            <td>67,1</td>
+            
+          </tr>
+          <tr>
+            <td>Turismo cultural</td>
+            <td>10,2</td>
+            
+          </tr>
+          <tr>
+            <td>Practica Deportiva</td>
+            <td>2,3</td>
+            
+          </tr>
+        </tbody>
+      </table>
+      <br><br>
+
+      <div class="card">
+            <div class="card-image waves-effect waves-light">
+              <img class="activator" src="assets/img/st17.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">San andres<i class="material-icons right">Ver</i></span>
+              </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">San andres<i class="material-icons right">Cerrar</i></span>
+              <p>Es la más grande de las islas que forman parte del Archipiélago de San Andrés, Providencia y Santa Catalina, 
+                siendo su extensión total de 26 km². Actualmente Colombia ejerce dominio sobre la isla, formando parte del 
+                único departamento insular del país.</p>
+            </div>
+  </div>
+
+  <div class="card">
+            <div class="card-image waves-effect waves-light">
+              <img class="activator" src="assets/img/st18.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Barranquilla<i class="material-icons right">Ver</i></span>
+              </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Barranquilla<i class="material-icons right">Cerrar</i></span>
+            <p> oficialmente Distrito Especial, Industrial y Portuario de Barranquilla, es la capital del departamento del Atlántico, Colombia. Está ubicada sobre la margen occidental del río Magdalena a 7,5 km de su desembocadura en el mar Caribe. En 1993 fue organizada constitucionalmente en distrito especial, industrial y portuario.7 Es el principal centro económico de la Región Caribe de Colombia, entre las actividades económicas destacan el comercio y la industria.
+
+          El establecimiento de la ciudad data de la tercera década del siglo XVII, cuando los sectores aledaños al río Magdalena se empezaron a poblar alrededor de mercedes otorgadas por la Corona Española. Durante la época de la Independencia, Barranquilla se distinguió por el apoyo de sus habitantes a la causa libertadora, lo que le valió ser erigida en villa en 1813. En la segunda mitad del siglo XIX adquiere importancia estratégica y económica al iniciarse la navegación a vapor por el río Magdalena, lo que le permitió convertirse en el principal centro exportador del país hasta la primera mitad del siglo XX. Desde fines del siglo XIX hasta los años 1930, Barranquilla fue el principal punto de entrada a Colombia de miles de inmigrantes y de adelantos como la aviación, la radio comercial y la telefonía, así como de varios deportes. </p>
+            </div>
+  </div>
+
+  <div class="card">
+            <div class="card-image waves-effect waves-light">
+              <img class="activator" src="assets/img/st19.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Buga<i class="material-icons right">Ver</i></span>
+              </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Buga<i class="material-icons right">Cerrar</i></span>
+              <p>Buga, oficialmente Guadalajara de Buga, es un municipio colombiano del centro del departamento del Valle del Cauca. Es famoso por la Basílica del Señor de los Milagros, a la que acuden peregrinos de todo el mundo. Su nombre completo es Guadalajara de Buga, porque es atravesada por el río Guadalajara, también llamado Río de las Piedras, el cual nace en la parte media de la Cordillera Central. Está situado en la parte plana del Valle del Cauca. Es una de las ciudades con más historia no sólo en el departamento sino en el país, su historia corre paralela a la historia del Estado Soberano del Cauca y del Valle del Cauca, posee una gran arquitectura colonial y moderna. la ciudad en crecimiento se considera un polo de desarrollo para el departamento del Valle del Cauca.</p>
+            </div>
+  </div>
+
+  <div class="card">
+            <div class="card-image waves-effect waves-light">
+              <img class="activator" src="assets/img/st20.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Medellin<i class="material-icons right">Ver</i></span>
+              </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Medellin<i class="material-icons right">Cerrar</i></span>
+              <p>Medellín es un municipio colombiano, capital del departamento de Antioquia, siendo la ciudad más poblada del 
+                departamento y la segunda del país.7 Se asienta en la parte más ancha de la región natural conocida como Valle 
+                de Aburrá, en la cordillera central de los Andes, constituyéndose como el mayor centro urbano de tal ramal andino. 
+                Se extiende a ambas orillas del río Medellín -llamado también río Aburrá-, que la atraviesa de sur a norte, y es el 
+                núcleo principal del área metropolitana del Valle de Aburrá</p>
+            </div>
+  </div>
+
+  <div class="card">
+            <div class="card-image waves-effect waves-light">
+              <img class="activator" src="assets/img/st21.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Cartagena<i class="material-icons right">Ver</i></span>
+              </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Cartagena<i class="material-icons right">Cerrar</i></span>
+              <p>Cartagena de Indias, oficialmente Distrito Turístico y Cultural de Cartagena de Indias abreviado Cartagena 
+                de Indias, D. T. y C., es la capital del departamento de Bolívar, Colombia. Fue fundada el 1 de junio de 1533 
+                por Pedro de Heredia. Desde 1991 Cartagena es un Distrito Turístico y Cultural. La ciudad está localizada a 
+                orillas del mar Caribe.</p>
+            </div>
+  </div>
+
+   <div class="card">
+            <div class="card-image waves-effect waves-light">
+              <img class="activator" src="assets/img/st23.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Manizales<i class="material-icons right">Ver</i></span>
+              </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Manizales<i class="material-icons right">Cerrar</i></span>
+              <p>Manizales es un municipio colombiano, capital del departamento de Caldas y la capital cafetera de Colombia. 
+                Es una ciudad ubicada en el centro occidente de Colombia, sobre la Cordillera Central de los Andes, cerca del 
+                Nevado del Ruiz. Forma parte del llamado Triángulo del café. Tiene una población de aproximadamente 397.488 
+                habitantes de acuerdo a las proyecciones demográficas oficiales para el año 2016; su área metropolitana conformada 
+                por los municipios de Manizales, Neira, Chinchiná, Villamaría y Palestina llega a una población cercana a los 554.594 
+                habitantes, y es también conocida como la subregión Centrosur de Caldas. Hace parte, junto con Risaralda, Quindío, el 
+                nor-occidente de Tolima, el Norte del Valle y el suroeste antioqueño del eje cafetero colombiano.</p>
+            </div>
+  </div>
+
+</div>
+
+
+    <div class="col s12 m4 l2" style="margin-top:20px;"> <!-- Note that "m4 l3" was added -->
+          
     </div>
+
+    
+   
+  
 
     <div class="col s12 m8 l10"> <!-- Note that "m8 l9" was added -->
       <disc-turismo>
@@ -36,13 +276,13 @@
             <ul class="collection">
               <li *ngFor="let turismo of turismoList"
                   class="collection-item avatar">
-                <i class="material-icons circle green">assessment</i>
+                <i class="material-icons circle blue darken-4"></i>
                 <span class="title">{{turismo.nombre}}</span>
                 <p>Cedula: {{turismo.cedula}} <br>
                    Telefono: {{turismo.telefono}}<br>
                    Destino: {{turismo.destino}}
                 </p>
-                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                <a href="#!" class="secondary-content"><i class="material-icons">Turismo</i></a>
               </li>
             </ul>
           </div>
