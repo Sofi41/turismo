@@ -1,3 +1,50 @@
-<h1>
-  {{title}}
-</h1>
+<nav>
+  <div class="nav-wrapper">
+    <a href="" class="brand-logo">Logo</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">          
+      <li>
+          <a  (click)="listarTurismo()"
+              class="waves-effect waves-light btn">
+              Ver los cursos existentes
+          </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+  <!-- Page Layout here -->
+  <div class="row">
+
+    <div class="col s12 m4 l2" style="margin-top:20px;"> <!-- Note that "m4 l3" was added -->
+          <div class="chip">
+            <img src="data:image/jpeg;base64,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" alt="Contact Person">
+            Profesor Jose
+          </div>
+    </div>
+
+    <div class="col s12 m8 l10"> <!-- Note that "m8 l9" was added -->
+      <disc-turismo>
+      </disc-turismo>
+    </div>
+
+  </div>
+
+
+<div id="listarturis" class="modal bottom-sheet open" style="z-index: 1003; display: block; opacity: 1; bottom: 0px; visibility:hidden;">
+          <div class="modal-content">
+            <h4>Listado de turismo</h4>
+            <ul class="collection">
+              <li *ngFor="let turismo of turismoList"
+                  class="collection-item avatar">
+                <i class="material-icons circle green">assessment</i>
+                <span class="title">{{turismo.nombre}}</span>
+                <p>Cedula: {{turismo.cedula}} <br>
+                   Telefono: {{turismo.telefono}}<br>
+                   Destino: {{turismo.destino}}
+                </p>
+                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+

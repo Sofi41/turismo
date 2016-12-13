@@ -1,0 +1,138 @@
+<div class="row">
+    <div class="col l4">
+        <div class="card darken-1">
+             <div class="card-content   ">
+                 <span class="card-title">Card Title</span>
+                    <p>I am a very simple card. 
+                       I am good at containing small bits of information.
+                       I am convenient because I require little markup to
+                       use effectively.
+                     </p>
+              </div>
+              <div class="card-action">
+                  <a href="#">This is a link</a>
+                  <a href="#">This is a link</a>
+             </div>
+      </div>
+  </div>
+</div>
+
+<div class="row">
+   <form class="col s10" #formTurismo="ngForm" novalidate>
+     <div class="row">
+
+        <div class="input-field col s5">
+            <input  id="nombre" 
+                    type="text" 
+                    class="validate"
+                    [class.invalid]="!nombreTxt.valid"
+                    name="nombre"
+                    #nombreTxt="ngModel"
+                    [(ngModel)]="turismoACrear.nombre"
+                    required>
+
+            <label  for="nombre"                    
+                    data-error="El nombre es requerido" 
+                    data-success="Ok">Nombre</label>            
+        </div>
+
+        <div class="input-field col s5">
+            <i class="material-icons prefix"></i>
+            <input  id="apellido" 
+                    type="text" 
+                    class="validate"
+                    [class.invalid]="!apellidoTxt.valid"
+                    name="apellido"
+                    #apellidoTxt="ngModel"
+                    [(ngModel)]="turismoACrear.apellido"
+                    required>
+
+            <label  for="apellido"                    
+                    data-error="El apellido es requerido" 
+                    data-success="Ok">Apellido</label>     
+        </div>    
+     </div>
+
+     <div class="row">
+        <div class="input-field col s5">
+            <input  id="cedula" 
+                    type="text" 
+                    class="validate"
+                    [class.invalid]="!cedulaTxt.valid"
+                    name="cedula"
+                    #cedulaTxt="ngModel"
+                    [(ngModel)]="turismoACrear.cedula"
+                    required>
+
+            <label  for="cedula"                    
+                    data-error="La cedula es requerida" 
+                    data-success="Ok">Cedula</label>            
+        </div>
+
+        <div class="input-field col s5">
+            <input id="telefono" 
+            type="text" 
+            class="validate"
+            [class.invalid]="!telefonoTxt.valid"
+            name="telefono"
+            #telefonoTxt="ngModel"
+            [(ngModel)]="turismoACrear.telefono"
+            required>
+            <label for="telefono" 
+            data-error="El telefono es requerido" 
+            data-success="ok">telefono</label>
+        </div>          
+     </div>
+
+
+     <div class="row">
+        <div class="input-field col s5">
+            <input  id="edad" 
+                    type="text" 
+                    class="validate"
+                    [class.invalid]="!edadTxt.valid"
+                    name="edad"
+                    #edadTxt="ngModel"
+                    [(ngModel)]="turismoACrear.edad"
+                    required>
+
+            <label  for="edad"                    
+                    data-error="La edad es requerida" 
+                    data-success="Ok">Edad</label>            
+        </div>
+
+        <div class="input-field col s5">
+            <label>Seleccione un destino</label>
+            <br><br>
+              <select class="browser-default"
+              id="destino"
+              [class.invalid]="!destinoTxt.valid"
+                name="destino"
+                #destinoTxt="ngModel"
+                [(ngModel)]="turismoACrear.destino"
+                required>
+                <option value="" disabled selected>Selecciona uno</option>
+                <option value="san Andres">san Andres</option>
+                <option value="Barranquilla">Barranquilla</option>
+                <option value="Cartagena">Cartagena</option>
+                <option value="Medellin">Medellin</option>
+              </select>
+        </div>          
+     </div>
+
+
+     <div class="row">
+        <div class="col s10">
+          <br/>
+          <button class="btn waves-effect waves-light" 
+                  type="submit" 
+                  name="action"
+                  [disabled]="!formTurismo.valid"
+                  (click)="guardarturismo()">
+            Guardar formulario
+            <i class="material-icons right"></i>            
+          </button>
+        </div>
+     </div>          
+    </form>  
+</div>
